@@ -348,7 +348,7 @@ public final class Utils {
      * Scale and center-crop a bitmap to fit the given dimensions.
      */
     public static Bitmap scaleAndCenterCropBitmap(Bitmap source, int newHeight, int newWidth) {
-        if (source == null) {
+        if (source == null || source.getConfig() == null) {
             return null;
         }
         int sourceWidth = source.getWidth();
